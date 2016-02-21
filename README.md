@@ -1,4 +1,4 @@
-# IT-eBooks-App usinf Angular Material-Start (ES6)
+# IT-eBooks-App - Angular Material, JSPM and ES6
 
 This branch implements the application using JSPM and ES6. 
 
