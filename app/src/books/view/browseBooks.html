@@ -15,11 +15,11 @@
     </md-toolbar>
     <md-progress-linear class="md-warn" md-mode="indeterminate" ng-if="vm.loading"></md-progress-linear>
     <!-- Container #2 (in wireframe) -->
-    <div flex layout="row" class="container">
+    <div flex layout="column" class="container">
         <md-content class="md-padding container"
             layout-sm="column" layout="row"
             layout-align="space-between none" layout-wrap>
-            <div flex="33" ng-repeat="book in vm.books">
+            <div flex-sm="100" flex-md="50" flex-lg="33" flex-gt-lg="25" ng-repeat="book in vm.books">
                 <md-card>
                     <md-card-title>
                         <md-card-title-text>
@@ -49,7 +49,7 @@
                     </md-card-actions>
                 </md-card>
             </div>
+            <md-button flex="100" class="md-raised md-primary" ng-click="vm.loadMoreBooks();"> Load More </md-button>
         </md-content>
     </div>
-    <md-button class="md-raised md-primary" ng-click="vm.loadMoreBooks();"> Load More </md-button>
 </div>
