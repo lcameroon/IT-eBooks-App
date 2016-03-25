@@ -1,0 +1,47 @@
+<div flex layout="column" ng-controller="BooksController as vm" >
+
+    <!-- Container #1 (in wireframe) -->
+    <md-toolbar layout="row" class="md-whiteframe-z2">
+        <h1 layout-align-gt-sm="left">
+            <md-icon aria-label="bookmark" class="material-icons step md-24" style="vertical-align: top; font-size: 28px; color:#CDDC39">bookmark</md-icon> IT eBooks
+        </h1>
+        <form ng-submit="vm.searchBookByTerm(vm.term)" flex>
+            <md-input-container md-no-float flex class="md-block"
+                style="margin: 13px 23px 0 0; height: 35px;">
+                <md-icon aria-label="search" class="material-icons step md-24" style="color: rgba(255,255,255,0.87)">search</md-icon>
+                <input aria-label="Search" ng-model="vm.term" type="text" style="color: #eee; border-color: rgba(255,255,255,0.87)">
+            </md-input-container>
+        </form>
+    </md-toolbar>
+    <md-progress-linear class="md-warn" md-mode="indeterminate" ng-if="vm.loading"></md-progress-linear>
+    <!-- Container #2 (in wireframe) -->
+    <div flex layout="column" class="container">
+        <md-content class="md-padding container"
+            layout-lt-md="column" layout="row"
+            layout-align="space-between none" layout-wrap>
+            <div flex-sm="100" flex-md="50" flex-lg="33" flex-gt-lg="25" ng-repeat="book in vm.books">
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{ book.Title }}</span>
+                            <span class="md-subhead">{{ book.SubTitle }}</span>
+                            <p>{{ book.Description }}</p>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media" style="height: 200px; padding-left: 10px;">
+                                <img ng-src="{{ book.Image }}" alt="" />
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button class="md-primary" ng-click="vm.bookDetailsDialog($event, book.ID)">
+                            <md-icon aria-label="info" class="material-icons step md-24">info</md-icon>
+                            Book Details
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+            <md-button flex="100" class="md-raised md-primary" ng-click="vm.loadMoreBooks();"> Load More </md-button>
+        </md-content>
+    </div>
+</div>

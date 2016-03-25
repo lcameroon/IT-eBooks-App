@@ -1,0 +1,77 @@
+{
+    "Error": "0",
+    "Time": 0.011,
+    "Total": "452",
+    "Page": 1,
+    "Books": [{
+        "ID": 1196558874,
+        "Title": "Head First JavaScript",
+        "SubTitle": "A Learner's Companion to JavaScript",
+        "Description": "Want to make the leap from writing HTML and CSS web pages and create dynamic web applications? Want to take your web skills to the next level? It sounds like you're ready to learn the Web's hottest programming language: JavaScript. Head First JavaScr ...",
+        "Image": "http://s.it-ebooks-api.info/3/head_first_javascript.jpg",
+        "isbn": "9780596527747"
+    }, {
+        "ID": 1195998323,
+        "Title": "JavaScript: The Good Parts",
+        "SubTitle": "Unearthing the Excellence in JavaScript",
+        "Description": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a su ...",
+        "Image": "http://s.it-ebooks-api.info/3/javascript_the_good_parts.jpg",
+        "isbn": "9780596517748"
+    }, {
+        "ID": 1689934194,
+        "Title": "Learning JavaScript Design Patterns",
+        "SubTitle": "A JavaScript and jQuery Developer's Guide",
+        "Description": "If you want to write beautiful, structured, and maintainable JavaScript code, this guide shows you how to apply both classical and modern design patterns to the language. The patterns in this book provide reusable code solutions to common problems in ...",
+        "Image": "http://s.it-ebooks-api.info/3/learning_javascript_design_patterns.jpg",
+        "isbn": "9781449331818"
+    }, {
+        "ID": 3234496620,
+        "Title": "Learning JavaScript",
+        "SubTitle": "A Hands-On Guide to the Fundamentals of Modern JavaScript",
+        "Description": "With the arrival of HTML5, jQuery, and Ajax, JavaScript web development skills are more valuable  than ever! This complete, hands-on JavaScript tutorial covers everything you need to know now.  Using line-by-line code walkthroughs and end-of-chapter ...",
+        "Image": "http://s.it-ebooks-api.info/10/learning_javascript.jpg",
+        "isbn": "9780321832740"
+    }, {
+        "ID": 3285308904,
+        "Title": "JavaScript Enlightenment",
+        "SubTitle": "From Library User to JavaScript Developer",
+        "Description": "If you're an advanced beginner or intermediate JavaScript developer, JavaScript Enlightenment will solidify your understanding of the language - especially if you use a JavaScript library. In this concise book, JavaScript expert Cody Lindley (jQuery ...",
+        "Image": "http://s.it-ebooks-api.info/3/javascript_enlightenment.jpg",
+        "isbn": "9781449342883"
+    }, {
+        "ID": 421958423,
+        "Title": "Getting Started with Meteor.js JavaScript Framework",
+        "SubTitle": "Develop modern web applications in Meteor, one of the hottest new JavaScript platforms",
+        "Description": "Meteor is a brand new platform built entirely in JavaScript that allows you to build modern, dynamic web applications in the blink of an eye. With support for nearly every popular JavaScript framework (and more being added every day), Meteor provides ...",
+        "Image": "http://s.it-ebooks-api.info/14/getting_started_with_meteor.js_javascript_framework.jpg",
+        "isbn": "9781782160823"
+    }, {
+        "ID": 3812702641,
+        "Title": "JavaScript Testing with Jasmine",
+        "SubTitle": "JavaScript Behavior-Driven Development",
+        "Description": "Get a concise introduction to Jasmine, the popular behavior-driven testing framework for JavaScript. This practical guide shows you how to write unit tests with Jasmine that automatically check for bugs in your application. Learn how to write specifi ...",
+        "Image": "http://s.it-ebooks-api.info/3/javascript_testing_with_jasmine.jpg",
+        "isbn": "9781449356378"
+    }, {
+        "ID": 469878427,
+        "Title": "JavaScript for PHP Developers",
+        "SubTitle": "A Concise Guide to Mastering JavaScript",
+        "Description": "If you want to significantly expand your web development skills beyond PHP, this practical, hands-on book teaches you ECMAScript - the core JavaScript language - from the ground up. You'll discover some similarities between JavaScript and PHP, such a ...",
+        "Image": "http://s.it-ebooks-api.info/3/javascript_for_php_developers.jpg",
+        "isbn": "9781449320195"
+    }, {
+        "ID": 2752282535,
+        "Title": "JavaScript Testing",
+        "SubTitle": "Test and debug JavaScript the easy way",
+        "Description": "JavaScript is an important part of web development in today's Web 2.0 world. While there are many JavaScript frameworks in the market, learning to write, test, and debug JavaScript without the help of any framework will make you a better JavaScript d ...",
+        "Image": "http://s.it-ebooks-api.info/14/javascript_testing.jpg",
+        "isbn": "9781849510004"
+    }, {
+        "ID": 3733509927,
+        "Title": "Object-Oriented JavaScript",
+        "SubTitle": "Create scalable, reusable high-quality JavaScript applications, and libraries",
+        "Description": "This book treats JavaScript as a serious object-oriented language, showing you how to build robust, maintainable, and powerful libraries and applications. Along the way, we cover many of the recent innovations such as AJAX, JSON, and interesting desi ...",
+        "Image": "http://s.it-ebooks-api.info/14/object-oriented_javascript.jpg",
+        "isbn": "9781847194145"
+    }]
+}
