@@ -1,13 +1,15 @@
+import BookDetailsController from 'books/BookDetailsController'
+
 /**
 * Main App Controller for the Angular Material Starter App
 * @param $scope
-* @param booksService
+* @param booksService, $scope, $log, $mdDialog, $mdMedia
 * @constructor
 */
-function BooksController( booksService, $log ) {
+function BooksController( booksService, $scope, $log, $mdDialog, $mdMedia ) {
 
-    $log = $log.getInstance( "SessionController" );
-    $log.debug("instanceOf() ");
+    $log = $log.getInstance('SessionController');
+    $log.debug('instanceOf() ');
 
     var self = this;
 
@@ -16,7 +18,8 @@ function BooksController( booksService, $log ) {
     self.searchBookByTerm = searchBookByTerm;
     self.loadMoreBooks = loadMoreBooks;
     self.getBooksByPage = getBooksByPage;
-    self.moreInfo = moreInfo;
+    self.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+    self.bookDetailsDialog = bookDetailsDialog;
     self.nextPage = 1;
     self.totalOfPages = null;
     self.loading = false;
@@ -63,7 +66,7 @@ function BooksController( booksService, $log ) {
     * Load More Books (go to next page)
     */
     function loadMoreBooks() {
-        $log.debug("loadMoreBooks() " );
+        $log.debug('loadMoreBooks()');
         if (self.nextPage <= Math.round(self.totalOfPages / 10)) {
             self.getBooksByPage(self.nextPage);
         }
@@ -71,14 +74,24 @@ function BooksController( booksService, $log ) {
     }
 
     /**
-    * Load More Books (go to next page)
+    * Open Book Details Dialog
     */
-    function moreInfo(id) {
-        console.log(id);
+    function bookDetailsDialog(ev, id) {
+        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && self.customFullscreen;
+        $mdDialog.show({
+            controller: BookDetailsController,
+            templateUrl: 'src/books/view/bookDetails.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true,
+            fullscreen: useFullScreen
+        });
+        booksService.selectedBookId = id
+
     }
 }
 
 export default [
-    'booksService', '$log',
+    'booksService', '$scope', '$log', '$mdDialog', '$mdMedia',
     BooksController
 ];

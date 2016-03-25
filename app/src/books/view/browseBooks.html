@@ -17,7 +17,7 @@
     <!-- Container #2 (in wireframe) -->
     <div flex layout="column" class="container">
         <md-content class="md-padding container"
-            layout-sm="column" layout="row"
+            layout-lt-md="column" layout="row"
             layout-align="space-between none" layout-wrap>
             <div flex-sm="100" flex-md="50" flex-lg="33" flex-gt-lg="25" ng-repeat="book in vm.books">
                 <md-card>
@@ -34,17 +34,9 @@
                         </md-card-title-media>
                     </md-card-title>
                     <md-card-actions layout="row" layout-align="end center">
-                        <md-button class="md-primary" ng-click="vm.moreInfo(book.ID)">
+                        <md-button class="md-primary" ng-click="vm.bookDetailsDialog($event, book.ID)">
                             <md-icon aria-label="info" class="material-icons step md-24">info</md-icon>
-                            More info
-                        </md-button>
-                        <!-- <md-button>
-                            <md-icon aria-label="file_download" class="material-icons step md-24">file_download</md-icon>
-                            Download
-                        </md-button> -->
-                        <md-button>
-                            <md-icon aria-label="share_arrow" class="material-icons step md-24">share_arrow</md-icon>
-                            Share
+                            Book Details
                         </md-button>
                     </md-card-actions>
                 </md-card>

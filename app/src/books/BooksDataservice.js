@@ -50,6 +50,7 @@ function BooksDataservice($q, $http, $log) {
         searchBookByTerm : searchBookByTerm,
         getBookDetails   : getBookDetails,
         getInitialTerm   : getInitialTerm,
+        selectedBookId   : null,
     };
 }
 

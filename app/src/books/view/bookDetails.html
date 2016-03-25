@@ -1,16 +1,50 @@
-<md-bottom-sheet class="md-list md-has-header">
-
-    <md-subheader>
-        Contact <span class="name">{{ vm.user.name }}</span>:
-    </md-subheader>
-
-    <md-list>
-      <md-item ng-repeat="item in vm.items">
-        <md-button ng-click="vm.performAction(item)">
-            <md-icon md-svg-icon="{{ item.icon_url }}"></md-icon>
-            {{item.name}}
-        </md-button>
-      </md-item>
-    </md-list>
-
-</md-bottom-sheet>
+<md-dialog aria-label="Mango (Fruit)"  ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{ bookData.Title }}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon aria-label="close" class="material-icons step md-24">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-progress-linear class="md-warn" md-mode="indeterminate" ng-if="loading"></md-progress-linear>
+        <md-dialog-content ng-show="bookData.Description">
+            <div class="md-dialog-content"
+                layout-lt-md="column" layout="row"
+                layout-align="space-between none" layout-wrap>
+                <h2 flex="100" style="margin-top: 0;">{{ bookData.SubTitle }}</h2>
+                <div flex-gt-md="40" flex-lt-md="100">
+                    <img ng-src="{{ bookData.Image }}" alt="{{ bookData.Title }}" />
+                </div>
+                <div flex-gt-md="60" flex-lt-md="100">
+                    <p><strong>Book Description</strong></p>
+                    <p>{{ bookData.Description }}</p>
+                    <p><strong>Book Details</strong></p>
+                    <ul>
+                        <li ng-show="bookData.Publisher">Publisher: <strong>{{ bookData.Publisher }}</strong></li>
+                        <li ng-show="bookData.Author">Author: <strong>{{ bookData.Author }}</strong></li>
+                        <li ng-show="bookData.ISBN">ISBN: <strong>{{ bookData.ISBN }}</strong></li>
+                        <li ng-show="bookData.Year">Year: <strong>{{ bookData.Year }}</strong></li>
+                        <li ng-show="bookData.Page">Pages: <strong>{{ bookData.Page }}</strong></li>
+                        <li ng-show="bookData.Language">Language: <strong>{{ bookData.Language }}</strong></li>
+                        <li ng-show="bookData.FileSize">File size: <strong>{{ bookData.FileSize }}</strong></li>
+                        <li ng-show="bookData.FileFormat">File format: <strong>{{ bookData.FileFormat }}</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button class="md-primary" ng-href="{{ bookData.Download }}" target="_blank" md-autofocus>
+                <md-icon aria-label="file_download" class="material-icons step md-24">file_download</md-icon>
+                eBook Download
+            </md-button>
+            <span flex></span>
+            <md-button ng-href="//isbn.directory/book/{{ bookData.ISBN }}" target="_blank">
+                <md-icon aria-label="shopping_cart" class="material-icons step md-24">shopping_cart</md-icon>
+                Buy Paper Book
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

@@ -5,4 +5,4 @@ let $log = new ExternalLogger();
     $log = $log.getInstance( "BOOTSTRAP" );
     $log.debug( "Configuring 'main' module" );
 
-export default angular.module('main', [ books] ).name;
+export default angular.module('main', [books] ).name;
